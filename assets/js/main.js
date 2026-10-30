@@ -329,6 +329,7 @@
   var lightbox = $("#lightbox");
   var lightboxImg = $("#lightboxImg");
   var lightboxTitle = $("#lightboxTitle");
+  var lightboxInner = $(".lightbox-inner", lightbox);
   var lastFocused = null;
 
   function openLightbox(trigger) {
@@ -337,9 +338,19 @@
     var img = trigger.querySelector("img");
     if (!img) return;
 
-    lightboxImg.src = trigger.getAttribute("data-image") || img.src;
     lightboxImg.alt = img.alt;
     lightboxTitle.textContent = trigger.getAttribute("data-title") || img.alt;
+
+    function settle() {
+      if (lightboxInner) lightboxInner.classList.remove("is-loading");
+    }
+
+    lightboxImg.addEventListener("load", settle, { once: true });
+    lightboxImg.addEventListener("error", settle, { once: true });
+    if (lightboxInner) lightboxInner.classList.add("is-loading");
+
+    lightboxImg.src = trigger.getAttribute("data-image") || img.src;
+    if (lightboxImg.complete) settle();
 
     lastFocused = document.activeElement;
     lightbox.classList.add("open");
@@ -373,6 +384,24 @@
         openLightbox(trigger);
       });
     });
+
+    // Warm the full-size screenshots once the page is idle so opening the
+    // lightbox never waits on a download.
+    function preloadScreenshots() {
+      $$(".project-media").forEach(function (trigger) {
+        var src = trigger.getAttribute("data-image");
+        if (!src) return;
+        var image = new Image();
+        image.decoding = "async";
+        image.src = src;
+      });
+    }
+
+    if ("requestIdleCallback" in window) {
+      window.requestIdleCallback(preloadScreenshots, { timeout: 4000 });
+    } else {
+      window.setTimeout(preloadScreenshots, 2500);
+    }
 
     $$("[data-close]", lightbox).forEach(function (closer) {
       closer.addEventListener("click", closeLightbox);
@@ -454,7 +483,7 @@
         })
         .catch(function () {
           status.textContent =
-            "Something went wrong. Please email me directly at jmmarquez@gmail.com.";
+            "Something went wrong. Please email me directly at josephmichaelmarquez2k6@gmail.com.";
           status.classList.add("error");
         })
         .then(function () {
