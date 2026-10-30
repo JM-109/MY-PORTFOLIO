@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <defs>
+    <filter id="billow" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.0026" numOctaves="2" seed="5" result="warp"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.005" numOctaves="3" seed="29" result="t"/>
+      <feDisplacementMap in="t" in2="warp" scale="185" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feColorMatrix in="d" type="matrix" values="0 0 0 0 0.155  0 0 0 0 0.15  0 0 0 0 0.165  0.33 0.33 0.33 0 0" result="g"/>
+      <feComponentTransfer in="g"><feFuncA type="table" tableValues="0 0.18 0.62 0.95"/></feComponentTransfer>
+      <feGaussianBlur stdDeviation="11"/>
+    </filter>
+    <filter id="wisp" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.0022" numOctaves="2" seed="63" result="warp"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.009" numOctaves="5" seed="97" result="t"/>
+      <feDisplacementMap in="t" in2="warp" scale="120" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feColorMatrix in="d" type="matrix" values="0 0 0 0 0.27  0 0 0 0 0.25  0 0 0 0 0.27  0.33 0.33 0.33 0 0" result="g"/>
+      <feComponentTransfer in="g"><feFuncA type="table" tableValues="0 0.08 0.42 0.8"/></feComponentTransfer>
+      <feGaussianBlur stdDeviation="2.6"/>
+    </filter>
+  </defs>
+  <rect width="600" height="600" filter="url(#billow)"/>
+  <rect width="600" height="600" filter="url(#wisp)"/>
+</svg>
