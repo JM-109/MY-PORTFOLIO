@@ -1,0 +1,982 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Joseph Michael Marquez (JM) — a 2nd year Information Technology student at ICCT Colleges and aspiring web developer from the Philippines. Projects, skills, education, and contact information."
+    />
+    <meta name="theme-color" content="#060607" />
+    <title>JM — Joseph Michael Marquez | Web Developer Portfolio</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+  </head>
+
+  <body>
+    <!-- Page loader -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <div class="preloader-inner">
+        <p class="preloader-logo">JM<span>.</span></p>
+        <div class="loader-bar"><span></span></div>
+        <p class="preloader-text">Loading portfolio</p>
+      </div>
+    </div>
+
+    <!-- Scroll progress -->
+    <div class="scroll-progress" aria-hidden="true">
+      <span id="scrollBar"></span>
+    </div>
+
+    <!-- Cursor glow (desktop only) -->
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+    <!-- Header -->
+    <header class="site-header" id="header">
+      <div class="header-inner">
+        <a href="#home" class="logo" aria-label="JM — back to home">JM<span>.</span></a>
+
+        <nav class="nav" id="nav" aria-label="Main navigation">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <a href="#contact" class="btn btn-sm header-cta">
+          Let's talk <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- ================= HOME ================= -->
+      <section class="home" id="home">
+        <div class="hero-bg" aria-hidden="true">
+          <span class="blob blob-1"></span>
+          <span class="blob blob-2"></span>
+          <span class="hero-grid"></span>
+        </div>
+
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">
+              <span class="status-dot" aria-hidden="true"></span>
+              Open to internships &amp; freelance work
+            </p>
+
+            <h1>
+              Hi, I'm <span class="gradient-text">JM</span>.<br />
+              I build for the web.
+            </h1>
+
+            <p class="typed-line">
+              I'm a <span id="typed" class="typed">Web Developer</span><span
+                class="caret"
+                aria-hidden="true"
+              ></span>
+            </p>
+
+            <p class="hero-text">
+              An Information Technology student from the Philippines who enjoys turning ideas into
+              clean, responsive websites. I learn by building — from small practice pages to
+              complete project layouts — and I'm always looking for the next thing to improve.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn">
+                View my work <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+              </a>
+              <a href="#contact" class="btn btn-ghost">Get in touch</a>
+            </div>
+
+            <div class="hero-meta">
+              <div class="socials" aria-label="Social profiles">
+                <a
+                  href="https://github.com/JM-109"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <a
+                  href="https://web.facebook.com/JMarquez1738/directory_contact_info"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                >
+                  <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/josephmichaelmarquez/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a
+                  href="https://www.reddit.com/user/yasumi_69/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Reddit"
+                >
+                  <i class="fa-brands fa-reddit-alien" aria-hidden="true"></i>
+                </a>
+              </div>
+
+              <a class="hero-mail" href="mailto:jmmarquez@gmail.com">
+                <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                jmmarquez@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="avatar-wrap">
+              <span class="bolts" aria-hidden="true"></span>
+              <span class="orbit orbit-1" aria-hidden="true"></span>
+              <span class="orbit orbit-2" aria-hidden="true"></span>
+
+              <div class="avatar-disc">
+                <img
+                  src="assets/images/daniel-avatar.png"
+                  alt="Portrait of Joseph Michael Marquez"
+                  width="720"
+                  height="720"
+                />
+              </div>
+
+              <span class="float-chip chip-1">
+                <i class="fa-brands fa-html5" aria-hidden="true"></i> HTML5
+              </span>
+              <span class="float-chip chip-2">
+                <i class="fa-brands fa-css3-alt" aria-hidden="true"></i> CSS3
+              </span>
+              <span class="float-chip chip-3">
+                <i class="fa-brands fa-js" aria-hidden="true"></i> JavaScript
+              </span>
+              <span class="float-chip chip-4">
+                <i class="fa-brands fa-php" aria-hidden="true"></i> PHP
+              </span>
+
+              <span class="cert-badge">
+                <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+                NC II Certified
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <a href="#about" class="scroll-cue" aria-label="Scroll to about section">
+          <span>Scroll</span>
+          <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+        </a>
+      </section>
+
+      <!-- ================= MARQUEE ================= -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <span>HTML5</span><i>✦</i><span>CSS3</span><i>✦</i><span>JavaScript</span><i>✦</i>
+            <span>PHP</span><i>✦</i><span>MySQL</span><i>✦</i><span>Responsive Design</span><i>✦</i>
+            <span>UI Design</span><i>✦</i><span>Git &amp; GitHub</span><i>✦</i>
+          </div>
+          <div class="marquee-group">
+            <span>HTML5</span><i>✦</i><span>CSS3</span><i>✦</i><span>JavaScript</span><i>✦</i>
+            <span>PHP</span><i>✦</i><span>MySQL</span><i>✦</i><span>Responsive Design</span><i>✦</i>
+            <span>UI Design</span><i>✦</i><span>Git &amp; GitHub</span><i>✦</i>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= ABOUT ================= -->
+      <section class="about section" id="about">
+        <div class="container about-grid">
+          <div class="about-visual reveal">
+            <div class="about-frame">
+              <img
+                src="assets/images/daniel-avatar.png"
+                alt="Joseph Michael Marquez smiling in a formal portrait"
+                width="720"
+                height="720"
+                loading="lazy"
+              />
+              <span class="frame-shine" aria-hidden="true"></span>
+            </div>
+
+            <div class="floating-card">
+              <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+              <div>
+                <strong>ICCT Colleges</strong>
+                <span>2nd Year IT Student</span>
+              </div>
+            </div>
+
+            <div class="floating-card floating-card-2">
+              <i class="fa-solid fa-medal" aria-hidden="true"></i>
+              <div>
+                <strong>NC II</strong>
+                <span>Certified</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-copy">
+            <p class="kicker kicker-left"><span></span> 01 — About me</p>
+            <h2 class="heading heading-left">
+              A developer who cares about the <span class="gradient-text">details</span>.
+            </h2>
+
+            <p>
+              I'm Joseph Michael Marquez — JM for short — an IT student and aspiring web developer.
+              My interest in technology started with curiosity about how websites work, and it has
+              grown into a habit of building, breaking, and rebuilding things until they feel right.
+            </p>
+            <p>
+              Most of what I know comes from hands-on practice: class activities, freeCodeCamp
+              exercises, and personal projects. I care about clear layouts, readable code, and
+              websites that feel good to use on any screen.
+            </p>
+            <p>
+              I'm working toward a career in front-end and full-stack web development, and I'm
+              always open to internships, collaborations, and projects where I can keep learning.
+            </p>
+
+            <ul class="quick-facts">
+              <li>
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <span>Based in the Philippines</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                <span>ICCT Colleges — 2nd Year IT</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-code" aria-hidden="true"></i>
+                <span>Front-end &amp; web development</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                <span>NC II certified</span>
+              </li>
+            </ul>
+
+            <div class="stats">
+              <div class="stat">
+                <strong><span class="counter" data-target="4">0</span>+</strong>
+                <span>Projects built</span>
+              </div>
+              <div class="stat">
+                <strong><span class="counter" data-target="1">0</span></strong>
+                <span>NC II certification</span>
+              </div>
+              <div class="stat">
+                <strong><span class="counter" data-target="8">0</span>+</strong>
+                <span>Tools explored</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SKILLS ================= -->
+      <section class="skills section" id="skills">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="kicker"><span></span> 02 — Skills</p>
+            <h2 class="heading">What I <span class="gradient-text">work with</span></h2>
+            <p>
+              A mix of technical and personal skills I've developed through coursework, practice,
+              and small projects.
+            </p>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-panel reveal">
+              <div class="panel-head">
+                <h3><i class="fa-solid fa-laptop-code" aria-hidden="true"></i> Technical skills</h3>
+                <span class="panel-tag">Coding</span>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-label"><span>HTML</span><span>90%</span></div>
+                <div class="skill-bar"><span style="--level: 90; --delay: 0.05s"></span></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-label"><span>CSS</span><span>85%</span></div>
+                <div class="skill-bar"><span style="--level: 85; --delay: 0.12s"></span></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-label"><span>JavaScript</span><span>70%</span></div>
+                <div class="skill-bar"><span style="--level: 70; --delay: 0.19s"></span></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-label"><span>PHP</span><span>60%</span></div>
+                <div class="skill-bar"><span style="--level: 60; --delay: 0.26s"></span></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-label"><span>MySQL / Database</span><span>60%</span></div>
+                <div class="skill-bar"><span style="--level: 60; --delay: 0.33s"></span></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-label"><span>Git &amp; GitHub</span><span>65%</span></div>
+                <div class="skill-bar"><span style="--level: 65; --delay: 0.4s"></span></div>
+              </div>
+            </div>
+
+            <div class="skill-panel reveal" style="--delay: 0.12s">
+              <div class="panel-head">
+                <h3><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> Professional skills</h3>
+                <span class="panel-tag">People</span>
+              </div>
+
+              <div class="skill-row">
+                <div class="skill-label"><span>Web design</span><span>85%</span></div>
+                <div class="skill-bar"><span style="--level: 85; --delay: 0.05s"></span></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-label"><span>Problem solving</span><span>80%</span></div>
+                <div class="skill-bar"><span style="--level: 80; --delay: 0.12s"></span></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-label"><span>Teamwork</span><span>90%</span></div>
+                <div class="skill-bar"><span style="--level: 90; --delay: 0.19s"></span></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-label"><span>Communication</span><span>80%</span></div>
+                <div class="skill-bar"><span style="--level: 80; --delay: 0.26s"></span></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-label"><span>Adaptability</span><span>85%</span></div>
+                <div class="skill-bar"><span style="--level: 85; --delay: 0.33s"></span></div>
+              </div>
+              <div class="skill-row">
+                <div class="skill-label"><span>Attention to detail</span><span>80%</span></div>
+                <div class="skill-bar"><span style="--level: 80; --delay: 0.4s"></span></div>
+              </div>
+            </div>
+          </div>
+
+          <p class="skill-note reveal">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            Levels are my own confidence ratings based on coursework and personal projects — not
+            formal assessments.
+          </p>
+
+          <div class="toolbox reveal">
+            <p class="toolbox-title">Tools &amp; technologies</p>
+            <ul class="tool-list">
+              <li><i class="fa-brands fa-html5" aria-hidden="true"></i> HTML5</li>
+              <li><i class="fa-brands fa-css3-alt" aria-hidden="true"></i> CSS3</li>
+              <li><i class="fa-brands fa-js" aria-hidden="true"></i> JavaScript</li>
+              <li><i class="fa-brands fa-php" aria-hidden="true"></i> PHP</li>
+              <li><i class="fa-solid fa-database" aria-hidden="true"></i> MySQL</li>
+              <li><i class="fa-brands fa-git-alt" aria-hidden="true"></i> Git</li>
+              <li><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</li>
+              <li><i class="fa-solid fa-code" aria-hidden="true"></i> VS Code</li>
+              <li><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i> Responsive</li>
+              <li><i class="fa-solid fa-pen-ruler" aria-hidden="true"></i> UI Design</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PROJECTS ================= -->
+      <section class="projects section" id="projects">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="kicker"><span></span> 03 — Projects</p>
+            <h2 class="heading">Selected <span class="gradient-text">work</span></h2>
+            <p>
+              Four academic and practice projects that helped me understand layout, responsive
+              design, interactivity, and interface details.
+            </p>
+          </div>
+
+          <div class="project-grid">
+            <!-- Project 1 -->
+            <div class="project-item reveal">
+              <article class="project-card">
+                <button
+                  class="project-media"
+                  type="button"
+                  data-image="assets/images/projects/kick-sole.jpg"
+                  data-title="Kick Sole Shoe Store"
+                  aria-label="View larger screenshot of Kick Sole Shoe Store"
+                >
+                  <img
+                    src="assets/images/projects/kick-sole-thumb.jpg"
+                    alt="Kick Sole Shoe Store product grid with four sneaker cards"
+                    width="800"
+                    height="600"
+                    loading="lazy"
+                  />
+                  <span class="project-overlay">
+                    <i class="fa-solid fa-expand" aria-hidden="true"></i> View screenshot
+                  </span>
+                </button>
+
+                <div class="project-body">
+                  <div class="project-top">
+                    <span class="project-index">01</span>
+                    <div class="project-links">
+                      <a
+                        href="projects/shoesite/index.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Open live preview of Kick Sole Shoe Store"
+                        ><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i
+                      ></a>
+                      <a
+                        href="https://github.com/JM-109"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="View Kick Sole source on GitHub"
+                        ><i class="fa-brands fa-github" aria-hidden="true"></i
+                      ></a>
+                    </div>
+                  </div>
+
+                  <h3>Kick Sole Shoe Store</h3>
+                  <p>
+                    An e-commerce landing page for a sneaker store. Built with semantic HTML and CSS
+                    Grid, with a bold hero, responsive product cards, and hover states that make
+                    browsing feel interactive.
+                  </p>
+
+                  <ul class="tags">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Responsive</li>
+                    <li>E-commerce</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-item reveal" style="--delay: 0.1s">
+              <article class="project-card">
+                <button
+                  class="project-media"
+                  type="button"
+                  data-image="assets/images/projects/tnc-login.jpg"
+                  data-title="TNC Login Portal"
+                  aria-label="View larger screenshot of TNC Login Portal"
+                >
+                  <img
+                    src="assets/images/projects/tnc-login-thumb.jpg"
+                    alt="Dark TNC login page with a glowing card, username and password fields"
+                    width="800"
+                    height="600"
+                    loading="lazy"
+                  />
+                  <span class="project-overlay">
+                    <i class="fa-solid fa-expand" aria-hidden="true"></i> View screenshot
+                  </span>
+                </button>
+
+                <div class="project-body">
+                  <div class="project-top">
+                    <span class="project-index">02</span>
+                    <div class="project-links">
+                      <a
+                        href="projects/tnc-login/index.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Open live preview of TNC Login Portal"
+                        ><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i
+                      ></a>
+                      <a
+                        href="https://github.com/JM-109"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="View TNC Login source on GitHub"
+                        ><i class="fa-brands fa-github" aria-hidden="true"></i
+                      ></a>
+                    </div>
+                  </div>
+
+                  <h3>TNC Login Portal</h3>
+                  <p>
+                    A dark-themed login screen built around a full-bleed background and a
+                    translucent card. Includes focus states, form styling, and a layout that stays
+                    centered on any screen size.
+                  </p>
+
+                  <ul class="tags">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>UI Design</li>
+                    <li>Forms</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-item reveal" style="--delay: 0.2s">
+              <article class="project-card">
+                <button
+                  class="project-media"
+                  type="button"
+                  data-image="assets/images/projects/camper-cafe.jpg"
+                  data-title="Camper Cafe Menu"
+                  aria-label="View larger screenshot of Camper Cafe Menu"
+                >
+                  <img
+                    src="assets/images/projects/camper-cafe-thumb.jpg"
+                    alt="Camper Cafe menu page with coffee and dessert sections on a paper-style card"
+                    width="800"
+                    height="600"
+                    loading="lazy"
+                  />
+                  <span class="project-overlay">
+                    <i class="fa-solid fa-expand" aria-hidden="true"></i> View screenshot
+                  </span>
+                </button>
+
+                <div class="project-body">
+                  <div class="project-top">
+                    <span class="project-index">03</span>
+                    <div class="project-links">
+                      <a
+                        href="projects/camper-cafe/index.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Open live preview of Camper Cafe Menu"
+                        ><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i
+                      ></a>
+                      <a
+                        href="https://github.com/JM-109"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="View Camper Cafe source on GitHub"
+                        ><i class="fa-brands fa-github" aria-hidden="true"></i
+                      ></a>
+                    </div>
+                  </div>
+
+                  <h3>Camper Cafe Menu</h3>
+                  <p>
+                    A cafe menu page completed through the freeCodeCamp responsive web design
+                    curriculum. Uses structured sections, classic typography, and a paper-style
+                    layout to present items and prices clearly.
+                  </p>
+
+                  <ul class="tags">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>freeCodeCamp</li>
+                    <li>Layout</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-item reveal" style="--delay: 0.3s">
+              <article class="project-card">
+                <button
+                  class="project-media"
+                  type="button"
+                  data-image="assets/images/projects/js-live-demo.jpg"
+                  data-title="JavaScript Live Demo"
+                  aria-label="View larger screenshot of JavaScript Live Demo"
+                >
+                  <img
+                    src="assets/images/projects/js-live-demo-thumb.jpg"
+                    alt="Dark JavaScript demo page with a live character counter, preview, and theme switch"
+                    width="800"
+                    height="600"
+                    loading="lazy"
+                  />
+                  <span class="project-overlay">
+                    <i class="fa-solid fa-expand" aria-hidden="true"></i> View screenshot
+                  </span>
+                </button>
+
+                <div class="project-body">
+                  <div class="project-top">
+                    <span class="project-index">04</span>
+                    <div class="project-links">
+                      <a
+                        href="projects/js-live-demo/index.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Open live preview of JavaScript Live Demo"
+                        ><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i
+                      ></a>
+                      <a
+                        href="https://github.com/JM-109"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="View JavaScript Live Demo source on GitHub"
+                        ><i class="fa-brands fa-github" aria-hidden="true"></i
+                      ></a>
+                    </div>
+                  </div>
+
+                  <h3>JavaScript Live Demo</h3>
+                  <p>
+                    A client-side programming exercise with a live character counter, instant
+                    preview, theme switching, and DOM elements created at runtime. Built with
+                    vanilla JavaScript and accessibility states kept in sync.
+                  </p>
+
+                  <ul class="tags">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>DOM</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="projects-more reveal">
+            <a
+              href="https://github.com/JM-109"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-ghost"
+            >
+              <i class="fa-brands fa-github" aria-hidden="true"></i> See more on GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= EDUCATION & ACHIEVEMENTS ================= -->
+      <section class="education section" id="education">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="kicker"><span></span> 04 — Education &amp; achievements</p>
+            <h2 class="heading">Learning, certified, and <span class="gradient-text">growing</span></h2>
+            <p>Where I've studied, what I've earned, and how I keep improving.</p>
+          </div>
+
+          <div class="edu-grid">
+            <div class="timeline">
+              <div class="timeline-item reveal">
+                <span class="timeline-dot" aria-hidden="true"></span>
+                <span class="timeline-date">2nd Year — Ongoing</span>
+                <h3>Information Technology Student — ICCT Colleges</h3>
+                <p>
+                  Currently in my second year at ICCT Colleges, building a foundation in web
+                  development, programming, and database management through coursework and
+                  self-paced practice.
+                </p>
+              </div>
+
+              <div class="timeline-item reveal" style="--delay: 0.1s">
+                <span class="timeline-dot" aria-hidden="true"></span>
+                <span class="timeline-date">Completed</span>
+                <h3>Rizal High School</h3>
+                <p>
+                  Senior High School. Strengthened my academic foundation and developed an early
+                  interest in computers, coding, and how digital products are made.
+                </p>
+              </div>
+
+              <div class="timeline-item reveal" style="--delay: 0.2s">
+                <span class="timeline-dot" aria-hidden="true"></span>
+                <span class="timeline-date">Certification</span>
+                <h3>NC II — National Certificate II</h3>
+                <p>
+                  Earned an NC II certification, a competency-based qualification that validates
+                  practical, hands-on technical skills.
+                </p>
+              </div>
+            </div>
+
+            <div class="achievements">
+              <div class="cert-card reveal">
+                <span class="cert-glow" aria-hidden="true"></span>
+                <span class="cert-icon"><i class="fa-solid fa-award" aria-hidden="true"></i></span>
+                <span class="cert-tag">Certification</span>
+                <h3>NC II</h3>
+                <p class="cert-name">National Certificate II</p>
+                <p class="cert-text">
+                  A competency-based certification that validates the practical technical skills I
+                  developed through my studies and hands-on training.
+                </p>
+                <span class="cert-verified">
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i> Certified
+                </span>
+              </div>
+
+              <ul class="achievement-list">
+                <li class="achievement reveal">
+                  <span class="achievement-icon"
+                    ><i class="fa-solid fa-code" aria-hidden="true"></i
+                  ></span>
+                  <div>
+                    <h4>Four web projects completed</h4>
+                    <p>
+                      Designed and built four complete practice projects, from an e-commerce
+                      landing page to an interactive JavaScript demo.
+                    </p>
+                  </div>
+                </li>
+
+                <li class="achievement reveal" style="--delay: 0.1s">
+                  <span class="achievement-icon"
+                    ><i class="fa-solid fa-book-open" aria-hidden="true"></i
+                  ></span>
+                  <div>
+                    <h4>Self-paced learning</h4>
+                    <p>
+                      Worked through freeCodeCamp's responsive web design exercises, including the
+                      Camper Cafe menu project.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CONTACT ================= -->
+      <section class="contact section" id="contact">
+        <div class="container contact-grid">
+          <div class="contact-copy">
+            <p class="kicker kicker-left reveal"><span></span> 05 — Contact</p>
+            <h2 class="heading heading-left reveal">
+              Let's build something <span class="gradient-text">worth clicking</span>.
+            </h2>
+
+            <p class="reveal">
+              Have a project, an internship opening, or just want to say hello? My inbox is always
+              open — I'll get back to you as soon as I can.
+            </p>
+
+            <a class="contact-email reveal" href="mailto:jmmarquez@gmail.com">
+              <span class="contact-email-icon"
+                ><i class="fa-regular fa-envelope" aria-hidden="true"></i
+              ></span>
+              <span>
+                <small>Email me at</small>
+                <strong>jmmarquez@gmail.com</strong>
+              </span>
+            </a>
+
+            <div class="socials contact-socials reveal" aria-label="Social profiles">
+              <a
+                href="https://github.com/JM-109"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://web.facebook.com/JMarquez1738/directory_contact_info"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/josephmichaelmarquez/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://www.reddit.com/user/yasumi_69/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Reddit"
+              >
+                <i class="fa-brands fa-reddit-alien" aria-hidden="true"></i>
+              </a>
+            </div>
+
+            <p class="availability reveal">
+              <span class="status-dot" aria-hidden="true"></span>
+              Currently open to internships and freelance projects.
+            </p>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm">
+            <div class="form-head">
+              <h3>Send a message</h3>
+              <p>Fill in the form and I'll reply by email.</p>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your full name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="What would you like to talk about?"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Tell me a little about your project or opportunity..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-block">
+              <span>Send message</span>
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            </button>
+
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="container footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="logo" aria-label="JM — back to home">JM<span>.</span></a>
+          <p>Building clean, responsive experiences — one project at a time.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="socials" aria-label="Social profiles">
+          <a
+            href="https://github.com/JM-109"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://web.facebook.com/JMarquez1738/directory_contact_info"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/josephmichaelmarquez/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.reddit.com/user/yasumi_69/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Reddit"
+          >
+            <i class="fa-brands fa-reddit-alien" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© <span id="year">2026</span> Joseph Michael Marquez. All rights reserved.</p>
+        <p>Designed &amp; built with HTML, CSS &amp; JavaScript.</p>
+      </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-top" id="backTop" type="button" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Screenshot lightbox -->
+    <div
+      class="lightbox"
+      id="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lightboxTitle"
+      aria-hidden="true"
+    >
+      <div class="lightbox-backdrop" data-close></div>
+      <figure class="lightbox-inner">
+        <button class="lightbox-close" type="button" aria-label="Close screenshot" data-close>
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+        <img id="lightboxImg" alt="Project screenshot" />
+        <figcaption id="lightboxTitle"></figcaption>
+      </figure>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

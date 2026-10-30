@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WS1 Chapter 5 | Javascript Live Demo</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <p class="eyebrow">WS1 Chapter 5. Client-Side Programming</p>
+        <h1 id="pageTitle">JavaScript Live Demo</h1>
+        <p class="intro">Type, click, inspect the source, then refresh the page.</p>
+
+        <section>
+            <h2>Live character counter</h2>
+            <label for="postBox">Your draft (up to 280 character)</label>
+            <textarea id="postBox" rows="5" maxlength="280" placeholder="Type a short post here..."></textarea>
+            <p id="counter" aria-live="polite">0 / 280</p>
+        </section>
+
+        <section>
+            <h2>Preview</h2>
+            <p id="preview" class="preview">Nothing typed yet.</p>
+        </section>
+
+        <section>
+            <h2>Switch theme</h2>
+            <button id="themeBtn" type="button" aria-pressed="false">Switch to dark theme</button>
+        </section>
+
+        <section>
+            <h2>Show and hide</h2>
+            <button id="toggleBtn" type="button">Show explanation</button>
+            <div id="panel" class="hidden">   
+                <p>Javascript changes this live page. The source file was not rewritten.</p>
+            </div>
+        </section>
+        <section>
+            <h2>Create an element</h2>
+            <p class="intro">The note below is created by Javascript at runtime. It is never written into this HTML file.</p>
+            <button id ="addNoteBtn" type="button">Add a temporary note</button>
+            <div id="notes"></div>
+        </section>
+
+        <p class="tip">Open the Console with F12. Open View Page Source with Ctrl+U.</p>
+        
+    </main>
+</body>
+</html>

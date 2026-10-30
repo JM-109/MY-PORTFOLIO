@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  <style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    background:url("tnc.jpg") center center/cover no-repeat;
+}
+
+.overlay{
+    width:100%;
+    height:100vh;
+    background:rgba(0,0,0,.65);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-box{
+
+    width:350px;
+    background:rgba(139, 125, 125, 0);
+    padding: 40px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgb(255, 166, 0);
+    text-align:center;
+}
+
+.login-box h1{
+  
+    color:#ff6a00;
+    font-size:40px;
+    padding: 24px;
+}
+
+.login-box p{
+
+    color:#b9510c;
+    margin-bottom:30px;
+}
+
+.login-box input{
+
+    width:100%;
+    padding:14px;margin-bottom:18px;
+    border:1px solid #ff5100;
+    border-radius:10px;
+    font-size:14px;
+}
+
+.login-box input:focus{
+
+    outline:none;
+    border:4px solid #ff6a00;
+}
+
+button{
+
+    width:50%;
+    padding:14px;
+    background:#ff6a00;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    cursor:pointer;
+    transition: 0.3em;
+}
+
+button:hover{
+
+    background:#e85d00;
+}
+
+.login-box a{
+
+    display:block;
+    margin-top:20px;
+    text-decoration:none;
+    color:#221818;
+}
+
+.login-box a:hover{
+
+    color:#ff6a00;
+}
+
+
+  </style>
+  <body>
+
+    <div class="overlay">
+
+    <div class="login-box">
+      <h1>Welcome to TNC</h1>
+      
+
+      <form>
+        <input type="text" placeholder="Username:" required />
+
+        <input type="password" placeholder="Password:" required />
+
+        <button id="login-btn" type="submit">Login</button>
+        <div class="forgot">
+          <a href="#">Forgot Password?</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
