@@ -4,11 +4,9 @@ on:
   push:
     branches: [main]
     paths:
-      - "src/**"
       - "index.html"
-      - "package.json"
-      - "package-lock.json"
-      - "vite.config.js"
+      - "assets/**"
+      - "projects/**"
   workflow_dispatch:
 
 permissions:
@@ -26,20 +24,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-
-      - run: npm ci
-
-      - run: npm run build
-
-      - uses: actions/configure-pages@v5
+      # Publish only the site itself, not the repo's .github/ and README.md.
+      - name: Assemble site
+        run: |
+          mkdir site
+          cp index.html site/
+          cp -r assets projects site/
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: site
 
   deploy:
     needs: build
