@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap");
-:root {  
---bg: #060607;
+
+/* =========================================================
+   TOKENS & BASE
+   ========================================================= */
+:root {
+  --bg: #060607;
   --bg-soft: #0a0a0c;
   --surface: #101013;
   --surface-2: #15151a;
@@ -12,6 +16,7 @@
   --border: rgba(255, 255, 255, 0.08);
   --border-strong: rgba(255, 255, 255, 0.14);
   --green: #6fe3a8;
+  --green-rgb: 111, 227, 168;
   --radius: 2.4rem;
   --max: 1240px;
   --font-head: "Space Grotesk", "Poppins", sans-serif;
@@ -871,12 +876,15 @@ main,
   gap: 0.7rem;
   padding: 0.85rem 1.5rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #1a0c0a;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: linear-gradient(135deg, #9bf3c9, var(--green));
+  color: #052018;
   font-size: 1.15rem;
   font-weight: 600;
   white-space: nowrap;
-  box-shadow: 0 12px 30px rgba(var(--accent-rgb), 0.35);
+  box-shadow:
+    0 12px 30px rgba(var(--green-rgb), 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .scroll-cue {
